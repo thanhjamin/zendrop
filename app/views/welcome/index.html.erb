@@ -1,0 +1,111 @@
+<section id='intro'>
+
+  <%= render 'layouts/header' %>
+
+  <div class='container'>
+    <div class='header-content col-sm-6 col-sm-offset-1'>
+      <header>Delivering</header>
+      <header style='margin-top: -0.35em'>Peace of Mind</header>
+      <h3 style='margin-bottom: 2em;'>Get your favorite strains, edibles, and oils delivered. Enjoy our unprecedented low prices.</h3>
+
+
+      <div class="input-group input-group-lg col-sm-9">
+
+        <%= form_for @user, url: { action: "create" }, remote: true do |f| %>
+          <%= f.text_field :email, placeholder: 'Email address...', class: 'form-control' %>
+          <%= f.submit 'Go', class: "btn btn-default" %>
+        <% end %>
+
+      </div>
+      <p id='leave-email'>Leave your email and we'll put you on our invite list.</p>
+    </div>
+  </div>
+</section>
+
+<section id='how-it-works'>
+  <div class='row indented'>
+    <h2 style='text-align:center; padding-top:40px;'>HOW ZENDROP WORKS</h2>
+    <div class='greenline'></div>
+    <div class='col-sm-3'>
+      <img src='/assets/order.png'></img>
+      <h4>STEP 1: Order</h4>
+      <p>Select the quantity of flowers/edibles/concentrate for the next 2 weeks.</p>
+    </div>
+    <div class='col-sm-1 dashed-line'></div>
+    <div class='col-sm-3'>
+      <img src='/assets/schedule.png' style='height:103px; width:103px'></img>
+      <h4>STEP 2: Schedule</h4>
+      <p>Select a convenient time slot for our friendly delivery service to arrive.</p>
+    </div>
+    <div class='col-sm-1 dashed-line'></div>
+    <div class='col-sm-3'>
+      <img src='/assets/enjoy.png' style='height:104px'></img>
+      <h4>STEP 3: Enjoy</h4>
+      <p>Your order will be delivered to your door in our discreet box. Open and enjoy the Zen lifestyle.</p>
+    </div>
+  </div>
+</section>
+
+<section id='why-zendrop'>
+  <div class='row indented'>
+    <h2 style='text-align:center; padding-top:40px;'>WHY ZENDROP?</h2>
+    <div class='greenline'></div>
+    <div class='col-sm-6'>
+      <img src='/assets/wholesale-price.png'></img>
+    </div>
+    <div class='col-sm-6'>
+      <h2><strong>Unbeatable Prices</strong></h2>
+      <p><i class='fa fa-check'></i>  Enjoy the wholesale prices.</p>
+      <p><i class='fa fa-check'></i>  Zendrop beats competitor prices by 40-55% on all our products.</p>
+      <p><i class='fa fa-check'></i>  We will match any of our competitors' prices</p>
+    </div>
+  </div>
+  <div class='row indented'>
+    <div class='col-sm-6'>
+      <h2><strong>Unbeatable Service</strong></h2>
+      <p><i class='fa fa-check'></i>  Our bi-monthly delivery will always be free.</p>
+      <p><i class='fa fa-check'></i>  There are no minimal orders on each delivery.</p>
+      <p><i class='fa fa-check'></i>  We deliver everywhere in the Greater Seattle Area.</p>
+    </div>
+    <div class='col-sm-6'>
+      <img src='/assets/friendly-delivery.png'></img>
+    </div>
+  </div>
+  <div class='row indented'>
+    <div class='col-sm-6'>
+      <img src='/assets/quality-product.png'></img>
+    </div>
+    <div class='col-sm-6'>
+      <h2><strong>Unbeatable Quality</strong></h2>
+      <p><i class='fa fa-check'></i>  All of our product has been curated and tested.</p>
+      <p><i class='fa fa-check'></i>  We only work with proven and consistent growers in Washington.</p>
+      <p><i class='fa fa-check'></i>  Satisfaction is guaranteed.</p>
+    </div>
+  </div>
+</section>
+
+<section id='social-media'>
+  <div class='row indented'>
+    <h2 style='text-align:center;'>CONNECT WITH US</h2>
+    <div class='greenline'></div>
+    <h4 style='text-align:center; margin-top: 40px;'>We would love to hear from you. Send us an email or shoot us a message through these networks. We will get back to you as soon as we can.</h4>
+    <h4 style='text-align:center; margin: 40px 0px 40px 0px;'>info@zendrop.co</h4>
+    <img src='/assets/Facebook.png'></img>
+    <img src='/assets/Twitter.png'></img>
+    <img src='/assets/Pinterest.png'></img>
+    <img src='/assets/Instagram.png'></img>
+  </div>
+</section>
+
+<div style='text-align:center'>
+  <p id='bottom-leave-email'>Leave your email and we'll put you on our invite list.</p>
+</div>
+<div class="input-group input-group-lg col-sm-4 col-sm-offset-4" id='bottom-email-input'>
+
+  <%= form_for :user, url: { action: "create" }, remote: true do |f| %>
+    <%= f.text_field :email, placeholder: 'Email address...', class: 'form-control' %>
+    <%= f.submit 'Go', class: "btn btn-default" %>
+  <% end %>
+</div>
+
+<%= render 'layouts/footer' %>
