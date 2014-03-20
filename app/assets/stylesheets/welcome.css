@@ -126,10 +126,10 @@ header {
 
 #why-zendrop {
   color: #000000;
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(/assets/background-leaf.svg);
-  background: -moz-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(/assets/background-leaf.svg);
-  background: -o-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(/assets/background-leaf.svg);
-  background: -ms-linear-gradient(top, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(/assets/background-leaf.svg);
+  background: -webkit-linear-gradient(top, rgba(255,255,255, 0.6) 0%,rgba(255,255,255, 0.6) 100%), url(/assets/background-leaf.svg);
+  background: -moz-linear-gradient(top, rgba(255,255,255, 0.6) 0%,rgba(255,255,255, 0.6) 100%), url(/assets/background-leaf.svg);
+  background: -o-linear-gradient(top, rgba(255,255,255, 0.6) 0%,rgba(255,255,255, 0.6) 100%), url(/assets/background-leaf.svg);
+  background: -ms-linear-gradient(top, rgba(255,255,255, 0.6) 0%,rgba(255,255,255, 0.6) 100%), url(/assets/background-leaf.svg);
   background-position-x: 330px;
 }
 
