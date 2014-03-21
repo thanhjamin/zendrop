@@ -10,6 +10,18 @@ class WelcomeController < ApplicationController
       end
   end
 
+  def partner
+  end
+
+  def about
+  end
+
+  def menu
+  end
+
+  def get_started
+  end
+
 private
 
   def users_params

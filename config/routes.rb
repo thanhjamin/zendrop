@@ -5,6 +5,11 @@ Zendrop::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get '/about/', to: 'welcome#about'
+  get '/partners/', to: 'welcome#partner'
+  get '/menu/', to: 'welcome#menu'
+
+
   resources :users,
     :controller => 'welcome',
     :only       => [:index, :create]
