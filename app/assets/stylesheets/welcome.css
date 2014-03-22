@@ -77,6 +77,7 @@ section {
    padding: 8px 16px 7px;
    margin-top: 4px;
    color: #ffffff;
+   font-weight: 600;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -85,6 +86,10 @@ section {
 
 .navbar-default .navbar-nav > li > .btn-started:hover, .navbar-default .navbar-nav > li > .btn-started:focus {
   background-color: #45b052;
+}
+
+.btn-started:hover {
+  color: #ffffff;
 }
 
 header {
@@ -217,6 +222,7 @@ input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f003   '; 
   background-color: #45b052;
   color: #ffffff;
   text-shadow: 0px 1px #24552A;
+  font-weight: 600;
 }
 
 #how-it-works > div > h2 {
@@ -278,6 +284,7 @@ input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f003   '; 
   background-color: #45b052;
   color: #ffffff;
   text-shadow: 0px 1px #24552A;
+  font-weight: 600;
 }
 
 .fa.fa-check {
