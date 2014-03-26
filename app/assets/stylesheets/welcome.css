@@ -30,7 +30,6 @@
 #landing {
   background-color: transparent;
   padding: 0% 7% 0% 7%;
-  height: 75px;
   border-color: transparent;
   margin-bottom: 0px;
 }
@@ -62,6 +61,7 @@ section {
 
 #landing > div > div.navbar-header > a > h3 {
   margin: 0px;
+  padding-top: 10px;
 }
 
 .btn-started {
