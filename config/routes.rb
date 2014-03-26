@@ -8,6 +8,7 @@ Zendrop::Application.routes.draw do
   get '/about/', to: 'welcome#about'
   get '/partners/', to: 'welcome#partner'
   get '/menu/', to: 'welcome#menu'
+  get '/faq/', to: 'welcome#faq'
 
 
   resources :users,

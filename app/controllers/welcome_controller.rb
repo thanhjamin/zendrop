@@ -22,6 +22,9 @@ class WelcomeController < ApplicationController
   def get_started
   end
 
+  def faq
+  end
+
 private
 
   def users_params
