@@ -17,7 +17,7 @@
           <li><%= link_to 'MENU', menu_path %></li>
           <li><%= link_to 'ABOUT', about_path %></li>
           <li><a href="mailto:info@zendrop.co">CONTACT</a></li>
-          <li><a href="#" class='btn-started'>Get Started</a></li>
+          <li><%= link_to 'Sign In', new_user_session_path, class: 'btn btn-started' %></li>
         </ul>
       </div>
     </div>

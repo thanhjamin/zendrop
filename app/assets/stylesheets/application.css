@@ -10,5 +10,9 @@
  *
  *= require_self
  *= require font-awesome
- *= require_tree .
+ *= require bootstrap
+ *= require footer
+ *= require welcome
+ *= require sign_in
  */
+

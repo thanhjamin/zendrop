@@ -1,4 +1,7 @@
 Zendrop::Application.configure do
+
+  config.assets.precompile += ['active_admin.js', 'active_admin.css', 'active_admin/print.css']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

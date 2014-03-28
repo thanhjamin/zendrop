@@ -1,0 +1,26 @@
+<div class='sign-in'>
+  <div class='container'>
+    <h1 style='color: #ffffff; font-weight: 600; text-align: center; margin-top: 40px;'>SIGN IN</h1>
+    <p style='color: #ffffff; text-align: center; font-size: 12px;'>Don't have an account? <%= link_to 'Sign Up', new_user_registration_path, style: 'color: #ffffff; text-decoration: underline;' %></p>
+    <div class='col-sm-4 col-sm-offset-4' style='margin-top: 5%; padding: 0px'>
+      <h3 style='background: #404040; text-transform: uppercase; color: white; font-weight: 600; letter-spacing: 0.15em; font-size: 17px; padding: 1.5em 0; margin: 0px; text-align: center;'>SIGN IN WITH YOUR EMAIL</h3>
+
+      <div class='form-group' style='padding:15px;'>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div><%= f.email_field :email, autofocus: true, placeholder: 'EMAIL', style: 'width: 100%; border-radius: 4px; margin-bottom: 20px;' %></div>
+
+          <div><%= f.password_field :password, autocomplete: "off", placeholder: 'PASSWORD', style: 'width: 100%; border-radius: 4px; margin-bottom: 20px;' %></div>
+
+          <div><%= f.submit "Sign in", style: 'width: 100%; border-radius: 4px;' %></div>
+        <% end %>
+
+        <div style='width: 100%; height: 14px;'>
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "Forgot your password?", new_password_path(resource_name), id: 'forgot-pw' %>
+          <% end -%>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
