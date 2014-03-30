@@ -14,5 +14,6 @@
  *= require footer
  *= require welcome
  *= require sign_in
+ += require header
  */
 

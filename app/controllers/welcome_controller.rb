@@ -28,6 +28,6 @@ class WelcomeController < ApplicationController
 private
 
   def users_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:first_name, :email)
   end
 end

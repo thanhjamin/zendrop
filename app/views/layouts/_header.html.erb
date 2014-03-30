@@ -17,7 +17,11 @@
           <li><%= link_to 'MENU', menu_path %></li>
           <li><%= link_to 'ABOUT', about_path %></li>
           <li><a href="mailto:info@zendrop.co">CONTACT</a></li>
+          <% if current_user.present? %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-started' %></li>
+          <% else %>
           <li><%= link_to 'Sign In', new_user_session_path, class: 'btn btn-started' %></li>
+          <% end %>
         </ul>
       </div>
     </div>

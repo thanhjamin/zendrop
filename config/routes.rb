@@ -1,5 +1,5 @@
 Zendrop::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +13,12 @@ Zendrop::Application.routes.draw do
   get '/menu/', to: 'welcome#menu'
   get '/faq/', to: 'welcome#faq'
 
+  resources :users, :only => [:show, :edit, :update, :verify, :check_out] do
+    member do
+      get 'verify'
+      get 'check_out'
+    end
+  end
 
   resources :users,
     :controller => 'welcome',
