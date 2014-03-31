@@ -6,11 +6,31 @@
   color: #ffffff;
 }
 
+#about-us-splash .navbar-brand {
+  color: #ffffff;
+}
+
+.verify .navbar-brand {
+  color: #ffffff;
+}
+
+.check-out .navbar-brand {
+  color: #ffffff;
+}
+
 .sign-up .navbar-brand:hover {
   color: #ffffff;
 }
 
 .sign-in .navbar-brand:hover {
+  color: #ffffff;
+}
+
+.verify .navbar-brand:hover {
+  color: #ffffff;
+}
+
+.check-out .navbar-brand:hover {
   color: #ffffff;
 }
 

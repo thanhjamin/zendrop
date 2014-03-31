@@ -1,29 +1,38 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class='verify'>
+  <div class='container'>
+    <h1 style='color: #ffffff; font-weight: 600; text-align: center; margin-top: 40px;'>MEDICAL INFORMATION</h1>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class='col-sm-4 col-sm-offset-2' style='margin-top: 5%; padding: 0px'>
+      <h3 style='background: #404040; text-transform: uppercase; color: white; font-weight: 600; letter-spacing: 0.15em; font-size: 17px; padding: 1.5em 0; margin: 0px; text-align: center;'>REGISTER YOUR PRESCRIPTION</h3>
+
+      <div class='form-group' style='padding:15px;'>
+        <%= form_for(@user) do |f| %>
+
+          <div><%= f.text_field :doctor_name, autofocus: true, placeholder: "DOCTOR'S NAME" %></div>
+
+          <div><%= f.text_field :patient_id, autofocus: true, placeholder: 'PATIENT ID' %></div>
+
+          <div><%= f.text_field :name_of_clinic, autofocus: true, placeholder: 'CLINIC NAME' %></div>
+
+          <div><%= f.telephone_field :phone, autofocus: true, placeholder: 'PHONE NUMBER' %></div>
+
+          <input class="uploadFile" placeholder="GREEN CARD IMAGE" disabled="disabled" />
+          <div class="fileUpload btn btn-primary" style="border:none;">
+            <span>UPLOAD</span>
+            <%= f.file_field :medical_documentation %>
+          </div>
+
+          <input class="uploadFile" placeholder="DRIVER'S LICENSE IMAGE" disabled="disabled" />
+          <div class="fileUpload btn btn-primary" style="border:none;">
+            <span>UPLOAD</span>
+            <%= f.file_field :proof_of_identity %>
+          </div>
+
+          <div><%= f.submit "NEXT" %></div>
+        <% end %>
+
+      </div>
+
     </div>
-  <% end %>
-
-<div class="well col-lg-13">
-  <div>
-    <%= f.label :name %><br />
-    <%= f.text_field :first_name, :class => "form-control", :placeholder => "Abraham Lincoln" %>
-  </div>
-  <div>
-    <%= f.label :email %><br />
-    <%= f.text_field :email, :class => "form-control", :placeholder => "abegoesham@gmail.com" %>
-  </div>
-  </br>
-    <div>
-    <%= f.submit "Update", :class => 'btn btn-primary' %>
   </div>
 </div>
-
-<% end %>
