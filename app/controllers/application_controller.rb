@@ -6,7 +6,12 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    user_path(@user.id)
+  stored_location_for(resource) ||
+    if resource.is_a?(Admin)
+      admin_dashboard_path
+    else
+      user_path(@user.id)
+    end
   end
 
   private

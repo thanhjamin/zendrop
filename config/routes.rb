@@ -10,7 +10,7 @@ Zendrop::Application.routes.draw do
 
   get '/about/', to: 'welcome#about'
   get '/partners/', to: 'welcome#partner'
-  get '/menu/', to: 'welcome#menu'
+  get '/menu/', to: 'products#index'
   get '/faq/', to: 'welcome#faq'
 
   resources :users, :only => [:show, :edit, :update, :verify, :check_out] do
@@ -19,6 +19,8 @@ Zendrop::Application.routes.draw do
       get 'check_out'
     end
   end
+
+  resources :products
 
   resources :users,
     :controller => 'welcome',
