@@ -1,22 +1,18 @@
-<h1>Menu</h1>
-
-<% for product in @products %>
-  <h1><%= product.category.name %></h1>
-    <h2><%= link_to product.name, product %></h2>
-    <div class="details">
-      <%= number_to_currency(product.price) %> in
-      <%= product.category.name %>
-    </div>
+<h1 style='text-align:center; margin-bottom: 20px;'>Menu</h1>
+<div class='container' id='menu'>
+  <div class='row'>
+    <%= render partial: 'menu' %>
   </div>
-<% end %>
+</div>
 
+<script>
 
-
-<a href="<%= product_path(:id) %>" class="box col-xs-12 col-sm-6 col-md-4 col-lg-3" style='padding:0px'>
-  <div class="thumbnail">
-    <div class='thumbnail-header-bar' style='height: 40px; padding:10px;'>
-      <p style='float:left'><%= product.name %></p>
-      <p style='float:right; font-weight: 500;'><%= number_to_currency(product.price) %></p>
-    </div>
-  </div>
-</a>
+$container = $('#top-picks');
+// initialize isotope
+$container.isotope({
+  itemSelector: '.box',
+  masonry: {
+    columnWidth: $container.width() / 12
+  }
+});
+</script>

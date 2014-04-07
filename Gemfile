@@ -10,6 +10,8 @@ end
 
 gem 'carrierwave'
 
+gem 'rmagick'
+
 gem 'stripe'
 
 # Use SCSS for stylesheets
