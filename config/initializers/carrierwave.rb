@@ -15,7 +15,7 @@ CarrierWave.configure do |config|
 
   config.fog_directory = AWS_S3_ASSETS_BUCKET
 
-  config.fog_public = true
+  config.fog_public = false
 end
 
 AWS_S3_ASSETS_BASE_URL = "https://#{AWS_S3_ASSETS_BUCKET}.s3.amazonaws.com"
