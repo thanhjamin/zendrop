@@ -9,6 +9,10 @@ group :development do
 end
 
 gem 'carrierwave'
+gem 'fog'
+gem 'unf'
+
+gem 'figaro'
 
 gem 'rmagick'
 
