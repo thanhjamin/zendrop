@@ -61,8 +61,40 @@
 
 .products output {
   padding: 0px;
+  font-size: 18px;
 }
 
 input {
   outline-color: transparent !important;
+}
+
+.addtocart-header {
+  height: 30px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.addtocart-body {
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.addtocart-body .form-control {
+  font-size: 16px;
+  border: 1px solid #404040;
+  height: 40px;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.well {
+  border-color: #404040;
+  background-color: transparent;
+}
+
+option:focus {
+  outline-color: transparent;
 }

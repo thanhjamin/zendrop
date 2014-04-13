@@ -2,9 +2,9 @@ jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   subscription.setupForm()
 
-  $("#phone_input").formatter(
-    pattern: "({{999}}) {{999}}-{{9999}}"
-  )
+  # $("#phone_input").formatter(
+  #   pattern: "({{999}}) {{999}}-{{9999}}"
+  # )
 
 subscription =
   setupForm: ->

@@ -1,10 +1,14 @@
-<div class='container' style='height:600px'>
+<%= render 'layouts/header' %>
 
-  <div class='col-sm-4'>
-    <img class="img-responsive" src="<%= @product.image_url %>" style='height: 100%'>
+<div class='container' style='height:600px; padding-top: 50px;'>
+
+  <div class='col-sm-4' style='height: 400px;'>
+    <div style='margin-top:21px; padding-top: 50px;'>
+      <img src="<%= @product.image_url %>">
+    </div>
   </div>
 
-  <div class='col-sm-6'>
+  <div class='col-sm-6' style='height: 400px;'>
     <h2><%= @product.name %></h2>
     <p>
       <b>Price:</b>
@@ -28,21 +32,54 @@
 
   </div>
 
-  <div class='col-sm-2 well'>
+  <div class='col-sm-2 well' style='margin-top: 21px;'>
     <div class='addtocart-header'>
       <p><span style='float:left; margin-right: 5px;'>Total Price:</span>
-      <output id="pricevalue">0</output></i></p>
+      <output id="priceValue">0</output></i></p>
     </div>
 
     <div class='addtocart-body'>
-      <p>Select Quantity:</p>
-      <output id="rangevalue">0</output>
-      <input type="range" min="0" max="20" value="0" step="1" onchange="rangevalue.value=value; pricevalue.value=value*6;" />
-
+      <select class='form-control' onchange='priceValue.value=value*<%= @product.price %>'>
+        <option default>Select Quantity</option>
+        <% if @product.category.name == 'Flowers' %>
+          <option value="1">1 gram</option>
+          <option value="2">2 grams</option>
+          <option value="3">3 grams</option>
+          <option value="4">4 grams</option>
+          <option value="5">5 grams</option>
+          <option value="6">6 grams</option>
+          <option value="7">7 grams</option>
+          <option value="8">8 grams</option>
+          <option value="9">9 grams</option>
+          <option value="10">10 grams</option>
+        <% elsif @product.category.name == 'Concentrates' %>
+          <option value="1">1 gram</option>
+          <option value="2">2 grams</option>
+          <option value="3">3 grams</option>
+          <option value="4">4 grams</option>
+          <option value="5">5 grams</option>
+          <option value="6">6 grams</option>
+          <option value="7">7 grams</option>
+          <option value="8">8 grams</option>
+          <option value="9">9 grams</option>
+          <option value="10">10 grams</option>
+        <% else %>
+          <option value="1">1 unit</option>
+          <option value="2">2 units</option>
+          <option value="3">3 units</option>
+          <option value="4">4 units</option>
+          <option value="5">5 units</option>
+          <option value="6">6 units</option>
+          <option value="7">7 units</option>
+          <option value="8">8 units</option>
+          <option value="9">9 units</option>
+          <option value="10">10 units</option>
+        <% end %>
+      </select>
     </div>
 
     <div class='addtocart-footer'>
-      <button class="btn btn-started" type="submit" id='main-search-button'>Add to Cart
+      <button class="btn btn-started" type="submit" style='margin: auto; width:100%;'>Add to Cart
       </button>
     </div>
   </div>
