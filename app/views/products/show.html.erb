@@ -1,16 +1,50 @@
-<p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
+<div class='container' style='height:600px'>
 
-<p>
-  <b>Price:</b>
-  <%= number_to_currency(@product.price) %>
-</p>
+  <div class='col-sm-4'>
+    <img class="img-responsive" src="<%= @product.image_url %>" style='height: 100%'>
+  </div>
 
-<p>
-  <b>Category:</b>
-  <%= @product.category.name %>
-</p>
+  <div class='col-sm-6'>
+    <h2><%= @product.name %></h2>
+    <p>
+      <b>Price:</b>
+    <%= number_to_currency(@product.price) %>
+    <% if @product.category.name == 'Flowers' %>
+      <%= 'per gram' %>
+    <% elsif @product.category.name == 'Concentrates' %>
+      <%= 'per gram' %>
+    <% else %>
+      <%= 'per unit' %>
+    <% end %>
+    </p>
 
-<%= link_to 'View all products', products_path %>
+    <p style='color: #45b052'><b>In Stock</b></p>
+
+    <p style='margin:0px;'><b>Product Description</b></p>
+    <p><%= @product.description %></p>
+
+    <p style='margin:0px;'><b>Medical Benefits</b></p>
+    <p><%= @product.medical_description %></p>
+
+  </div>
+
+  <div class='col-sm-2 well'>
+    <div class='addtocart-header'>
+      <p><span style='float:left; margin-right: 5px;'>Total Price:</span>
+      <output id="pricevalue">0</output></i></p>
+    </div>
+
+    <div class='addtocart-body'>
+      <p>Select Quantity:</p>
+      <output id="rangevalue">0</output>
+      <input type="range" min="0" max="20" value="0" step="1" onchange="rangevalue.value=value; pricevalue.value=value*6;" />
+
+    </div>
+
+    <div class='addtocart-footer'>
+      <button class="btn btn-started" type="submit" id='main-search-button'>Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
