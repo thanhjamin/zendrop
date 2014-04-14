@@ -1,1 +1,29 @@
-<h1>Sup <%= @user.first_name %></h1>
+<%= render 'layouts/header' %>
+
+<div class='container' style='height: 600px;'>
+
+  <h2>Your Account</h2>
+
+  <div class='col-sm-6 row'>
+
+    <div class='well' style='padding:0px;'>
+      <h3 style='margin-top:0px; background-color: #404040; color: #ffffff; padding: 10px; border-bottom: 1px solid black;'>Basic Information</h3>
+      <h4 style='padding-left: 10px;'><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h4>
+      <h4 style='padding-left: 10px;'>Email: <%= @user.email %></h4>
+      <h4 style='padding-left: 10px;'>Delivery Address: <%= @user.address %></h4>
+      <h4 style='padding-left: 10px;'>Phone: <%= @user.phone %></h4>
+    </div>
+
+    <div class='well' style='padding:0px;'>
+      <h3 style='margin-top:0px; background-color: #404040; color: #ffffff; padding: 10px; border-bottom: 1px solid black;'>Medical Information</h3>
+      <h4 style='padding-left: 10px;'>Patient ID: <%= @user.patient_id %></h4>
+      <h4 style='padding-left: 10px;'>Doctor: <%= @user.doctor_name.titleize %></h4>
+      <h4 style='padding-left: 10px;'>Clinic: <%= @user.name_of_clinic.titleize %></h4>
+    </div>
+    <% if current_user.present? %>
+      <%= link_to "Update Information", edit_user_path, class: "btn btn-info" %>
+    <% end %>
+
+  </div>
+
+</div>
