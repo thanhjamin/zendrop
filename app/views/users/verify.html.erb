@@ -1,8 +1,9 @@
 <div class='verify'>
+  <%= render 'layouts/header_user' %>
   <div class='container'>
     <h1 style='color: #ffffff; font-weight: 600; text-align: center; margin-top: 40px;'>MEDICAL INFORMATION</h1>
 
-    <div class='col-sm-4 col-sm-offset-2' style='margin-top: 5%; padding: 0px'>
+    <div class='col-sm-4 col-sm-offset-1' style='margin-top: 5%; padding: 0px'>
       <h3 style='background: #404040; text-transform: uppercase; color: white; font-weight: 600; letter-spacing: 0.15em; font-size: 17px; padding: 1.5em 0; margin: 0px; text-align: center;'>REGISTER YOUR PRESCRIPTION</h3>
 
       <div class='form-group' style='padding:15px;'>
@@ -14,7 +15,7 @@
 
           <div><%= f.text_field :name_of_clinic, autofocus: true, placeholder: 'CLINIC NAME' %></div>
 
-          <div><%= f.telephone_field :phone, autofocus: true, placeholder: 'PHONE NUMBER' %></div>
+          <div><%= f.telephone_field :clinic_phone, autofocus: true, placeholder: 'CLINIC PHONE NUMBER' %></div>
 
           <input class="uploadFile" placeholder="GREEN CARD IMAGE" disabled="disabled" />
           <div class="fileUpload btn btn-primary" style="border:none;">
@@ -34,5 +35,39 @@
       </div>
 
     </div>
+
+    <div class='col-sm-5 col-sm-offset-1' style='margin-top: 5%; padding: 0px'>
+      <h3 style='background: #404040; text-transform: uppercase; color: white; font-weight: 600; letter-spacing: 0.15em; font-size: 17px; padding: 1.5em 0; margin: 0px; text-align: center;'>EXAMPLE</h3>
+
+      <div style='background-color: #ffffff; padding:15px;'>
+
+        <p>Documentation of Physician Authorization to Engage in the Medical Use of Marijuana in Washington State. For verification visit www.MyClinicName.com, or call <i class="fa fa-asterisk"></i>My Clinic at <i class='fa fa-asterisk'></i>(206) 555-5555.</p>
+
+        <p>Patient Name: John Doe</p>
+
+        <div>
+          <p style='float:left; margin-right: 40px;'>Date of Birth: 5/15/85 </p>
+          <p><i class="fa fa-asterisk"></i>Patient ID: CLINIC10853</p>
+        </div>
+
+        <p>I am a naturopath licensed in the State of Washington under RCW 18.36A.</p>
+
+        <p>I have diagonsed the above named patient as having a terminal or debilitating medical condition as defined in RCW 69.51A.010. I have advised the above named patient about the potential risks and benefits of the medical use of marijuana. I have assessed the aboved named patient's medical history and medical condition. It is my medical opinion that this patient may benefit from the medical use of marijuana.</p>
+
+        <p><i class="fa fa-asterisk"></i>Printed Name of Physician: James Healer, N.D.</p>
+
+        <p>Signature of Physician: <img src='/assets/signature.png' style='width: 50%;'></p>
+
+        <p>WA Dept. of Health Credential Number: NT 000000389</p>
+
+        <div>
+          <p style='float:left; margin-right: 40px;'>Auth. Date: 7/16/13</p>
+          <p>Exp. Date: 7/16/14</p>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </div>

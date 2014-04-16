@@ -25,6 +25,15 @@
   height: 520px;
 }
 
+.verify em {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.verify .fa {
+  color: #45b052;
+}
+
 .check-out .form-group {
   background: rgba(240, 240, 240, 0.8);
   height: 305px;
@@ -161,13 +170,13 @@
 
 .verify {
   background: url(/assets/verify-lake.jpg) no-repeat center center;
-  background: cover;
+  background-size: cover;
   height: 900px;
 }
 
 .check-out {
   background: url(/assets/verify-lake.jpg) no-repeat center center;
-  background: cover;
+  background-size: cover;
   height: 900px;
 }
 

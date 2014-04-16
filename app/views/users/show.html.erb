@@ -16,6 +16,11 @@
 
     <div class='well' style='padding:0px;'>
       <h3 style='margin-top:0px; background-color: #404040; color: #ffffff; padding: 10px; border-bottom: 1px solid black;'>Medical Information</h3>
+      <% if @user.verified? %>
+      <h4 style='padding-left: 10px;'><i class="fa fa-certificate" style='margin-right: 10px; color:#45b052'></i>Verified</h4>
+      <% else %>
+      <h4 style='padding-left: 10px;'><i class='fa fa-ban' style='margin-right: 10px; color: red'></i>Not Verified</h4>
+      <% end %>
       <h4 style='padding-left: 10px;'>Patient ID: <%= @user.patient_id %></h4>
       <h4 style='padding-left: 10px;'>Doctor: <%= @user.doctor_name.titleize %></h4>
       <h4 style='padding-left: 10px;'>Clinic: <%= @user.name_of_clinic.titleize %></h4>
