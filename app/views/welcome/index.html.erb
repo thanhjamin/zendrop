@@ -112,4 +112,33 @@
   </div>
 </div>
 
+<div class="modal fade" id="verifyModal">
+  <div class="modal-body">
+    <h2 style='text-align:center; font-weight: 600; margin-top: 10px; margin-bottom: 20px;'>Are You Eligible to Visit Zendrop.co?</h2>
+    <div id='verifyBody'>
+      <p style='font-size:18px; text-align: center;'>Zendrop operates in compliance with Washington state laws regarding access to cannabis. Are you at least <strong>21 years old or a valid medical marijuana patient?</b></p>
 
+      <div style='margin-top: 40px; margin-bottom: 60px; width: 50%; margin-right: auto; margin-left: auto;'>
+        <a href="#" class="btn btn-primary">Yes, I Am</a>
+        <button class="btn btn-default" onclick="displayMessage()">No, I Am Not</button>
+      </div>
+
+      <div style='text-align:center;'>
+        <small style='font-weight:normal;'>*If you keep seeing this age prompt whenever you visit Zendrop.co, please enable cookies in your web browser. Thank you!</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(window).load(function(){
+      $('#verifyModal').modal('show');
+  });
+  $('#invalid-visitor').click
+</script>
+
+<script>
+function displayMessage() {
+  document.getElementById("verifyBody").innerHTML='<p class="verify-message">Sorry, we can not let you in</p><i class="fa fa-frown-o"></i>';
+}
+</script>
