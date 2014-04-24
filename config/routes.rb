@@ -22,6 +22,10 @@ Zendrop::Application.routes.draw do
 
   resources :products
 
+  resources :orders do
+    resources :order_items
+  end
+
   resources :users,
     :controller => 'welcome',
     :only       => [:index, :create]

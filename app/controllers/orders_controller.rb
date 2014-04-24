@@ -1,5 +1,14 @@
 class OrdersController < ApplicationController
+
+  def new
+    @order = Order.new
+  end
+
   def create
+    @order = Order.new(orders_params)
+    respond_to do |format|
+      format.html
+    end
   end
 
   private
