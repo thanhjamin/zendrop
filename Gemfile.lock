@@ -6,8 +6,9 @@ GIT
     spree_gateway (2.2.1)
       spree_core (~> 2.2.0)
 
-PATH
-  remote: ~/workspace/spree
+GIT
+  remote: https://github.com/thanhjamin/z_spree.git
+  revision: 389f0234630266b0fc5bae097ed7479c48da1d0f
   specs:
     spree (2.2.2.beta)
       spree_api (= 2.2.2.beta)
@@ -58,8 +59,9 @@ PATH
     spree_sample (2.2.2.beta)
       spree_core (= 2.2.2.beta)
 
-PATH
-  remote: ~/workspace/spree_auth_devise-e75c1f021c43
+GIT
+  remote: https://github.com/thanhjamin/z_spree_devise.git
+  revision: 5e57dbffdc50d49fbb1cbae764ae152b035e86e2
   specs:
     spree_auth_devise (2.2.0)
       cancan (~> 1.6.10)
@@ -81,7 +83,7 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    active_utils (2.0.2)
+    active_utils (2.2.1)
       activesupport (>= 2.3.11)
       i18n
     activemerchant (1.42.9)
@@ -110,7 +112,7 @@ GEM
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     arel (4.0.2)
-    awesome_nested_set (3.0.0.rc.3)
+    awesome_nested_set (3.0.0.rc.6)
       activerecord (>= 4.0.0, < 5)
     aws-sdk (1.27.0)
       json (~> 1.4)
@@ -132,7 +134,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    colorize (0.7.2)
+    colorize (0.7.3)
     deface (1.0.0)
       colorize (>= 0.5.8)
       nokogiri (~> 1.6.0)
@@ -172,7 +174,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
+    mini_portile (0.6.0)
     minitest (4.7.5)
     monetize (0.3.0)
       money (~> 6.1.0.beta1)
@@ -180,8 +182,8 @@ GEM
       i18n (~> 0.6.4)
     multi_json (1.9.2)
     multi_xml (0.5.5)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     paperclip (3.4.2)
       activemodel (>= 3.0.0)
