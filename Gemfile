@@ -44,6 +44,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'spree', :git => "https://github.com/thanhjamin/z_spree"
+gem 'spree', :git => "https://github.com/thanhjamin/z_spree.git"
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-2-stable'
-gem 'spree_auth_devise', :git => "https://github.com/thanhjamin/z_spree_devise
+gem 'spree_auth_devise', :git => "https://github.com/thanhjamin/z_spree_devise.git"
