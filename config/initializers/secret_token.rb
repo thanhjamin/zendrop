@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Zendrop::Application.config.secret_key_base = '302240e8bb76073b7596013535d35fb04cf592d07b121f8ef9a9e0a431b13642a744e1d804e39a87f1cb28bcdbcbad094e354ba36ae3feb816390d1ca4053b43'
+Zendrop::Application.config.secret_key_base = 'b5d0335cbdb4c243f2ac0266de7248efd4e6c5749c0452226ebbde99184a5ef6fdc78b4f3828d97a7340c7feb0b7ee641c4d4cc515dd2aeae6ab1f2bef15528f'
